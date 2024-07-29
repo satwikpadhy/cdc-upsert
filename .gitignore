@@ -1,0 +1,44 @@
+#user
+*.class
+*.log
+*.csv
+*.crc
+_SUCCESS
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# sbt specific
+.settings/
+.cache/
+.history/
+.lib/
+.bsp/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/project
+project/metals.sbt
+project/plugins/project/
+.project
+.classpath
+.cache
+.vscode
+.metals
+.bloop
+
+# Scala-IDE specific
+.scala_dependencies
+.worksheet
+
+# IntelliJ IDEA specific
+*.log
+*.iml
+*.ipr
+*.iws
+.idea
+
+#MacOs
+.DS_Store
