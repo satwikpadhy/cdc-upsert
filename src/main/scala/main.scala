@@ -1,4 +1,4 @@
-import org.apache.spark.sql.{SparkSession, DataFrame}
+import org.apache.spark.sql.SparkSession
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.functions._
 
@@ -36,7 +36,7 @@ object main {
 
     df = df.toDF(df.columns.map(_.toLowerCase): _*)
     println( s"Source Count = ${df.count()}")
-    
+
     df.createOrReplaceTempView("source")
 
 
