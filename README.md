@@ -1,4 +1,4 @@
-This project enables us to upsert incoming data to an postgres table.
+This project enables us to upsert incoming data to a postgres table.
 
 The table must have an column named "op" and the file with incoming changes also needs to have the column "op"
 Different values for op mean the following:
