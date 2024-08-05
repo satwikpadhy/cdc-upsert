@@ -1,7 +1,7 @@
 This project enables us to upsert incoming data to a postgres table.
 
-The table must have a column named "op" and the file with incoming changes also needs to have the column "op"
-Different values for op mean the following:
+The table must have a column named "operation" and the file with incoming changes also needs to have the column "operation"
+Different values for operation mean the following:
   1. U : An existing record needs to be updated (on the basis of primary key)
   2. I : A new record needs to be inserted
   3. D : An existing record need to be deleted (on the basis of primary key)
