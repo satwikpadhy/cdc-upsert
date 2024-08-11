@@ -81,10 +81,10 @@ object main {
     val preFinalDF = deletedDF.join(updtDF, pk, "left_anti")
     println(s"count after removing updated rows: ${preFinalDF.count()}")
     val finalDF = preFinalDF.unionByName(updtDF)
-    println(s"final df count = ${finalDF.count()}")
-    println(s"final df distinct count = ${finalDF.distinct.count()}")
 
     finalDF.persist()
+    println(s"final df count = ${finalDF.count()}")
+    println(s"final df distinct count = ${finalDF.distinct.count()}")
 
     finalDF.distinct
           .repartition(10)
@@ -93,7 +93,7 @@ object main {
           .option("driver", "org.postgresql.Driver")
           .option("url", s"jdbc:postgresql://${ip}:${port}/${database}")
           .option("user", s"${user}")
-          .option("truncate",false)
+          .option("truncate",true)
           .option("password", s"${password}")
           .option("dbtable", s"${tablename}")
           .save()
